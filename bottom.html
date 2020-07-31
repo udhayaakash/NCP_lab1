@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; 
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Dashboard</h2>
+
+<div class="row">
+  <div class="column left" style="background-color:#aaa; border-style: solid;">
+    <h2>HyperLinks</h2>
+    <a href="#" onclick="load_home()">Home</a>
+    <br><a href="#" onclick="load_reg()">Registration Form</a>
+    <br><a href="#" onclick="load_home()">Feedback Form</a>
+    <br><a href="#" onclick="load_home()">Administration details</a>
+    <br><a href="#" onclick="load_home()">contact</a>
+
+
+  </div >
+  <div class="column middle" id="content" style="border-style: solid;">
+
+  </div>
+
+  <div class="column right" style="border-style: solid;">
+
+    <html>
+    
+        <img src="3.jpg" alt="Workplace" usemap="#workmap" style="width:250px;height:150px;">
+    
+        <map name="workmap">
+          <area shape="rect" coords="0,0,100,350" alt="Computer" href="book.html">
+          <area shape="rect" coords="101,0,201,350" alt="Phone" href="book.html">
+          <area shape="rect" coords="201,0,301,350" alt="Coffee" href="book.html">
+        </map>
+    </html>
+  </div>
+</div>
+
+
+<script>
+function load_home() {
+    // document.getElementsByClassName("column middle").innerHTML='<object type="text/html" data="home.html" ></object>';
+     document.getElementById("content").innerHTML='<object type="text/html" data="home.html" ></object>';
+}
+
+function load_reg() {
+    // document.getElementsByClassName("column middle").innerHTML='<object type="text/html" data="home.html" ></object>';
+     document.getElementById("content").innerHTML='<object type="text/html" data="reg.html" ></object>';
+}
+</script>
+
+
+</body>
+
+</html>
